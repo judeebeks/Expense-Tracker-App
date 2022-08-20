@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+}
+
+.totalSpent,
+.averageTotal {
+    background-color: bisque;
+    text-align: center;
+}
+
+.highestSpent {
+    background-color: rgb(248, 86, 74);
+}
+
+.lowestSpent {
+    background-color: chartreuse;
+}
+
+.bg-gray {
+    background-color: rgb(241, 243, 245);
+}
+
+#submitEdit {
+    display: none;
+}
+
+.inactive {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.active {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+@media (min-width: 989px) {
+    .totalSpent,
+    .averageTotal,
+    .highestSpent,
+    .lowestSpent {
+        width: fit-content !important;
+    }
+}

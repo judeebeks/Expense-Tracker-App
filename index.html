@@ -1,0 +1,134 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/fontawesome-all.min.css" />
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script src="./index.js" defer></script>
+</head>
+
+<body>
+    <div class="col-12 text-center bg-dark py-2">
+        <h1 class="text-warning">EXPENZI-O</h1>
+    </div>
+    <div class="container px-5">
+        <div class="row">
+            <div class="col-md-12 p-3 text-start">
+                <p>
+                    Plan how you spend your salary or earnings with the new
+                    <span><a href="index.html" class="text-warning text-decoration-none"
+                >EXPENZI-O</a
+              ></span
+            >.
+            <br />
+
+            Keep track of your expenses or spendings with
+            <span class="text-warning text-decoration-none">EXPENZI-O</span> app.
+                </p>
+            </div>
+        </div>
+        <form id="addTrack">
+            <div class="row mb-4">
+                <div class="row d-flex">
+                    <div class="col-md-5 m-4">
+                        <label for="itemName" class="form-label fw-bold">Item Name</label>
+                        <input type="text" class="form-control" id="itemName" placeholder="What I purchase..." />
+                    </div>
+                    <div class="col-md-5 m-4">
+                        <label for="itemItem" class="form-label fw-bold">Item Price</label
+              >
+              <div class="input-group">
+                <span class="input-group-text">&#8358;</span>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="itemPrice"
+                  placeholder="How much I purchased it..."
+                  aria-label="Amount (to the nearest naira)"
+                />
+                <span class="input-group-text">.00</span>
+              </div>
+            </div>
+            <div class="col-md-3 m-4">
+              <label for="dateAdded" class="form-label fw-bold"
+                >Date Purchased</label
+              >
+
+              <input type="date" class="form-control" id="dateAdded" />
+            </div>
+            <div class="col-md-8">
+              <div class="m-3">
+                <label for="itemDescription" class="form-label fw-bold"
+                  >Item Description</label
+                >
+                <textarea
+                  class="form-control"
+                  name="description"
+                  id="itemDescription"
+                  placeholder="Why I purchase this Item..."
+                  rows="2"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 text-center d-flex justify-content-center">
+          <button type="submit" class="btn btn-warning mx-2" id="submit">
+            Add Track
+          </button>
+          <button type="button" class="btn btn-success mx-2" id="submitEdit">
+            Done Edit
+          </button>
+        </div>
+      </form>
+      <div class="row my-5 d-flex justify-content-center text-center">
+        <div class="col-lg-2 p-3 m-2 totalSpent">
+          <div class="badge bg-light text-dark p-2 mb-2">
+            Total Amount Spent
+          </div>
+          <h3></h3>
+        </div>
+
+        <div class="col-lg-2 p-3 m-2 highestSpent">
+          <div class="badge bg-light text-dark p-2 mb-2">
+            Highest Amount Spent
+          </div>
+          <h3></h3>
+        </div>
+        <div class="col-lg-2 p-3 m-2 lowestSpent">
+          <div class="badge bg-light text-dark p-2 mb-2">
+            Lowest Amount Spent
+          </div>
+          <h3></h3>
+        </div>
+        <div class="col-lg-2 p-3 m-2 averageTotal">
+          <div class="badge bg-light text-dark p-2 mb-2">
+            Average Amount Spent
+          </div>
+          <h3></h3>
+        </div>
+      </div>
+      <div class="row displaycont"></div>
+      <div class="col-md-12 text-start mt-4">
+        <button
+          type="button"
+          class="btn btn-secondary text-center"
+          id="clearAll"
+        >
+          Clear All
+        </button>
+      </div>
+    </div>
+
+    <footer class="text-center m-4">
+      <h6>Developedby JdEbekes/Techie-Genie</h6>
+      <p>&copy; <span id="setDate">2025</span></p>
+    </footer>
+  </body>
+</html>
